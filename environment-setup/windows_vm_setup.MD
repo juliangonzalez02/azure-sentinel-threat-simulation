@@ -18,7 +18,9 @@ Download: <https://learn.microsoft.com/en-us/sysinternals/downloads/sysmon>
 
 ## PowerShell Logging
 Ensure to enable script block logging to capture PowerShell commands
+
 Path: `gpedit.msc` > Computer Configuration > Administrative Templates > Windows Components > Windows PowerShell
+
 Then Enable: "Turn on PowerShell Script Block Logging"
 
 Next: Sentinel Onboarding
