@@ -8,7 +8,7 @@ _Adapted from the following project: https://github.com/fizahmad/azure-sentinel-
 * Create custom detection rules via **KQL**
 * Build automated alerts via **Logic Apps**
 * Utilize the automated alerts to deploy **playbooks**
-* Leverage **Kali Linux** to simulate adversarial behavior using common TTPs
+* Leverage **Atomic Red** to simulate adversarial behavior using common TTPs
 
 ## Ordered Lab Steps
 1. Setup → Begin lab with setup/README.md to build the Azure environment and onboard non-Azure VM.
