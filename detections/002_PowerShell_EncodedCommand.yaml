@@ -1,0 +1,26 @@
+id: 002-powershell-encoded-command
+name: PowerShell Encoded Command Execution
+description: Detects obfuscated/encoded PowerShell execution (Base64 encoded commands) often used to bypass logging and AV. 
+severity: High
+status: Available
+requiredDataConnectors:
+  - connectorId: AzureMonitorWindowsAgents
+    dataTypes:  [SecurityEvent]
+tactics: [Execution, DefenseEvasion]
+techniques: [T1059.001]
+queryFrequency: 1h
+queryPeriod: 1h
+triggerOperator:  gt
+triggerThreshold: 0
+kind: Scheduled
+query: |-
+  SecurityEvent
+  | where TimeGenerated >= ago(1h)
+  | where EventID == 4688
+  | where NewProcessName has_any ("powershell. exe", "pwsh.exe")
+  | where CommandLine has_any ("-enc ", "-encodedcommand", "FromBase64String")
+  | project TimeGenerated, Computer, Account, NewProcessName, CommandLine, ParentProcessName
+version: 1.0.0
+tags:
+  - T1059.001
+  - ObfuscatedExecution
