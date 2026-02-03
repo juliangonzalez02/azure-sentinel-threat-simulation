@@ -78,7 +78,7 @@ SysmonParsed
 <br>
 
 ## Next Steps
-Now that we have parsed our security event logs, next we will import YAML files from [detections](/detections/detection-rules-setup) into Sentinel to improve our security posture against common TTPs.
+Now that we have parsed our security event logs, next we will import YAML files from [detections](/detections/detection-rules-setup.md) into Sentinel to improve our security posture against common TTPs.
 
 <b4>
 **References:**
