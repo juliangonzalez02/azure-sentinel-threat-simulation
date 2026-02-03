@@ -1,0 +1,25 @@
+id: 001-lsass-memory-dump
+name: LSASS Memory Dump Detected
+description: Catches processes accessing lsass.exe memory - credential dumping technique used by mimikatz, procdump etc.
+severity: High
+status: Available
+requiredDataConnectors: 
+  - connectorId: AzureMonitorWindowsAgents
+    dataTypes: [SecurityEvent]
+tactics: [CredentialAccess]
+techniques:  [T1003.001]
+queryFrequency: 1h
+queryPeriod: 1h
+triggerOperator: gt
+triggerThreshold: 0
+kind: Scheduled
+query: |-
+  SysmonParsed
+  | where EventID == 10
+  | where TargetImage endswith "lsass.exe"
+  | where not(SourceImage has_any ("svchost.exe", "lsass.exe", "MsMpEng.exe", "csrss.exe", "vmtoolsd.exe"))
+  | project TimeGenerated, Computer, SourceImage, TargetImage, SourceUser, GrantedAccess
+version: 1.0.0
+tags:
+  - T1003.001
+  - CredentialDumping
