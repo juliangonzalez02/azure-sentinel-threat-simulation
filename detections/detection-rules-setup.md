@@ -4,6 +4,12 @@ Now we will import custom KQL detection rules into our Sentinel instance to prop
 
 <br>
 
+## Note
+
+For simplicity, we shall modify `010, PowerShell Download, T1059.001` to **Medium** severity in order to allow for installion of Atomic Red Team on our previously onboarded Windows VM. Sentinel will detect this exploit but shall not isolate the host system.
+
+<br>
+
 ## Rules Overview
 
 | ID | Name | MITRE | Severity | Data Source |
@@ -17,7 +23,7 @@ Now we will import custom KQL detection rules into our Sentinel instance to prop
 | 007 | RDP Brute Force | T1110.001 | High | SecurityEvent 4625 |
 | 008 | PsExec Service Creation | T1021.002 | High | SecurityEvent 7045 |
 | 009 | New Local Admin | T1098 | High | SecurityEvent 4732 |
-| 010 | PowerShell Download | T1059.001 | High | Sysmon EID 1 |
+| 010 | PowerShell Download | T1059.001 | High/_medium_ | Sysmon EID 1 |
 | 011 | AMSI Bypass | T1562.001 | High | Sysmon EID 1 |
 | 012 | SAM Database Copy | T1003.002 | High | Sysmon EID 1 |
 | 013 | Defender Disabled | T1562.001 | High | Sysmon EID 1 |
