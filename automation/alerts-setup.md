@@ -23,7 +23,7 @@ First we will leverage workflows from Azure Logic Apps to automatically notify t
 - Sample payload mappings are annotated inside each JSON file.
 
 ## Next Steps
-Now that we've automated security events to alert the security team, next we will create [playbooks](/playbooks-severe-events.md) that Sentinel will run to automatically contain and resolve security events.
+Now that we've automated security events to alert the security team, next we will create [playbooks](playbooks-severe-events.md) that Sentinel will run to automatically contain and resolve severe security events.
 
 **References:**
 * Link to playbook
