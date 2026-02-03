@@ -23,4 +23,6 @@ Path: `gpedit.msc` > Computer Configuration > Administrative Templates > Windows
 
 Then Enable: "Turn on PowerShell Script Block Logging"
 
-Next: Sentinel Onboarding
+## Next Steps
+
+Now that we have install/configured a Windows VM with Sysmon, next we shall [onboard](sentinel-vm-onboard.md) the VM to our Azure environment
