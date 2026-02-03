@@ -4,9 +4,8 @@ Now that we've created automated alerts for the security team, we will need to c
 ## Establishing Severity Baseline
 It is vital that we first define severe security events to prevent isolating systems, business-critical ones especially, that are not compromised. For instance, potential malicious activity in our environment can produce security events that are either low or medium severity. These events could be malicious but we do not want to immediately isolate the affected systems, Sentinel shall alert and the security team will investigate further. For security events that are either high or critical severity, Sentinel shall automatically isolate compromised systems and the security team will investigate potential breach in our environment.
 
-## Alert of Incident
-- `playbook-alert-to-email.json` — On Sentinel incident creation: get incident → extract entities → send email to SOC team members.
-- `playbook-alert-to-teams.json` — Post to Teams webhook with incident link and entities.
+## Playbooks for Severe Security Events
+- `playbook-auto-contain-host.json` — (placeholder) Isolate host via Defender for Endpoint API when high-severity alert fires and notify the security team.
 
 ## Import Guide
 1) Sentinel > Automation > Create > Import playbook (Logic App) > Upload JSON.
@@ -16,8 +15,6 @@ It is vital that we first define severe security events to prevent isolating sys
 
 ## Automated Alert Notifications
 - Severity >= High → Run `playbook-auto-contain-host.json` (after you create a service principal with isolate permissions).
-- All severities → Run `playbook-alert-to-email.json` for awareness.
-- Lateral movement detections → Run `playbook-alert-to-teams.json` to SOC channel.
 
 ## Notes
 - Keep one playbook per action; chain via automation rules to stay modular.
@@ -25,7 +22,7 @@ It is vital that we first define severe security events to prevent isolating sys
 - Sample payload mappings are annotated inside each JSON file.
 
 ## Next Steps
-Now that we've automated security events to alert the security team, next we will create [playbooks](/playbooks-severe-events.md) that Sentinel will run to automatically contain and resolve security events.
+Now that we've created automated playbooks that Sentinel will run to contain and resolve severe security events, next we shall begin testing our security posture through simulating various common TTPs against the Windows VM we previously onboarded to our Azure environment.
 
 **References:**
 * Link to playbook
