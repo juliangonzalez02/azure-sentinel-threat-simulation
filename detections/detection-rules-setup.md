@@ -1,6 +1,8 @@
 # Detection Rules
 
-Here are the custom KQL detection rules we will configure in our Sentinel instance. Each rule maps to MITRE ATT&CK and each exploitation varies based on phase of attack.
+Now we will import custom KQL detection rules into our Sentinel instance to properly identify potentially malicious activity. Each rule maps to the MITRE ATT&CK framework and each exploitation varies based on phase of attack. For the purpose of this lab, we will specifically account for these exploitations.
+
+<br>
 
 ## Rules Overview
 
@@ -27,6 +29,8 @@ Here are the custom KQL detection rules we will configure in our Sentinel instan
 | 019 | LSASS Handle Access Spike | T1003.001 | High | Sysmon EID 10 |
 | 020 | Office Child Process | T1204.002 | High | Sysmon EID 1 |
 | 021 | DCSync | T1003.006 | Critical | SecurityEvent 4662 |
+
+<br>
 
 ## By MITRE Tactic
 
@@ -63,7 +67,10 @@ Here are the custom KQL detection rules we will configure in our Sentinel instan
 ### Impact
 - 015 - Shadow Copy Deletion
 
+<br>
+
 ## YAML Import Guide
+Find the `YAML files` folder in this repo, then we will import each file as its own rule.
 
 1. Go to **Sentinel > Analytics > Create > Scheduled query rule**
 2. Copy values from YAML file: 
@@ -73,6 +80,8 @@ Here are the custom KQL detection rules we will configure in our Sentinel instan
    - Frequency and period (1h)
 3. Click **Review + create**
 
+<br>
+
 ## Next Steps
 
-Use commands from `attack-simulation/README.md` to trigger each rule in your lab. 
+Now that we've established our detection rules for potential malicious activity, next we will configure playbooks for Sentinel to [alert](/automation/alerts-setup.md) the security team of security events and automatically isolate compromised systems.
