@@ -77,6 +77,10 @@ SysmonParsed
 
 <br>
 
-References:
+## Next Steps
+Now that we have parsed our security event logs, next we will import YAML files from [detections](/detections/detection-rules-setup) into Sentinel to improve our security posture against common TTPs.
+
+<b4>
+**References:**
 - [Azure-Sentinel Sysmon-AllVersions Parser](https://github.com/Azure/Azure-Sentinel/blob/master/Parsers/Sysmon/Sysmon-AllVersions_Parser.txt)
 - [Improved Sysmon Sentinel Kusto Parser](https://gist.github.com/fryguy04/0d673f64c386df7903e175b11cfe31e5)
