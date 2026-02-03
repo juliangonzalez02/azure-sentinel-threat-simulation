@@ -178,7 +178,7 @@ SecurityEvent
 <br>
 
 ## Next Steps
-The data connectors are now established and future compromised VM is sending logs to Sentinel. Next we must [parse](/parsers/parsers-setup.md) the logs into structured fields for easier querying and detection rule writing.
+The data connectors are now established and the future compromised VM is sending logs to Sentinel. Now we must [parse](/parsers/parsers-setup.md) the logs into structured fields for easier querying and detection rule writing.
 
 <br>
 
