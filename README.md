@@ -1,5 +1,5 @@
 # Azure Sentinel Threat Simulation
-This lab is a threat simulation that leverages Azure Sentinel to automate detection rules, alerts, and playbooks against common Tactics, Techniques, and Procedures (TTPs). We shall onboard a Windows 10 VM onto a sandbox Azure environment through Azure Arc, assume the Windows VM has been compromised, then simulate malicious scripts/executables using Atomic Red Team on the aforementioned VM with administrator privileges.
+This lab is a threat simulation that leverages Azure Sentinel to automate detection rules, alerts, and playbooks against common Tactics, Techniques, and Procedures (TTPs). We will onboard a Windows 10 VM onto a sandbox Azure environment through Azure Arc, assume the Windows VM has been compromised, then simulate malicious scripts/executables using Atomic Red Team on the aforementioned VM with administrator privileges.
 
 <br>
 
