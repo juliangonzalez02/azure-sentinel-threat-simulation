@@ -6,4 +6,4 @@
 
 ## Next Steps
 
-Now that we have established our Azure environment with a LAW and Sentinel, next we shall [install/configure](windows-vm-setup.md) a Windows VM with Sysmon.
+Now that we have established our Azure environment with a LAW and Sentinel, next we will [install and configure](windows-vm-setup.md) a Windows VM with Sysmon included.
